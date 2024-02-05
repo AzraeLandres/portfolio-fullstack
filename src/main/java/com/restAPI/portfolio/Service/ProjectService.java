@@ -17,11 +17,7 @@ public class ProjectService {
     @Autowired
     private ProjectRepo projectRepo;
 
-    @Autowired
-    private SkillRepository skillRepository;
-
-    @Autowired
-    private TagRepo tagRepo;
+    
 
     public ProjectEntity saveDetails(ProjectEntity projectEntity) {
         return projectRepo.save(projectEntity);
@@ -33,26 +29,6 @@ public class ProjectService {
     }
 
 
-    public List<ProjectEntity> getAllProjectsBySkills(Integer skillsId) {
-        Optional<SkillEntity> skillEntityOptional = skillRepository.findById(skillsId);
-
-        if (skillEntityOptional.isPresent()) {
-            return projectRepo.findBySkills(skillEntityOptional.get());
-        } else {
-            return Collections.emptyList();
-        }
-    }
-
-
-    public List<ProjectEntity> getCustom(Integer tagsId) {
-        Optional<TagEntity> tagEntityOptional = tagRepo.findById(tagsId);
-        if (tagEntityOptional.isPresent()) {
-            return projectRepo.findByTags(tagEntityOptional.get());
-
-        } else {
-            return Collections.emptyList();
-        }
-    }
 
 
 }

@@ -15,11 +15,7 @@ import java.util.Set;
 
 public interface ProjectRepo extends JpaRepository<ProjectEntity, Integer> {
 
-    List<ProjectEntity> findBySkills(SkillEntity skillEntity);
-List<ProjectEntity> findByTags(TagEntity tagEntity);
-
-@Query("SELECT p.tags FROM ProjectEntity p WHERE p.id = :projectId")
-    Set<TagEntity> findTagsByProjectId(@Param("projectId") Integer projectId);
+ 
 
 
 @Query("SELECT p FROM ProjectEntity p JOIN FETCH p.skills JOIN FETCH p.tags")
