@@ -19,7 +19,7 @@ public class EmailController {
         this.emailService = emailService;
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @PostMapping("projects/contact")
     public ResponseEntity<String> sendEmail(@RequestBody Contact contact) {
         emailService.sendEmail(contact.getEmailAddress(), contact.getSubject(), contact.getMessage());

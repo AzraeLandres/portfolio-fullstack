@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/projects")
 public class ProjectController {
@@ -36,7 +36,7 @@ public class ProjectController {
         return projectService.saveDetails(project);
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "*")
     @GetMapping("/all")
     public List<ProjectDto> getProjects(){
         List<ProjectEntity> projects = projectService.getAllProjects();
