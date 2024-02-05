@@ -21,7 +21,7 @@ public class Config {
     private String password;
 
     public Config() throws URISyntaxException {
-        String dbUrl = System.getenv("CLEARDB_DATABASE_URL");
+        String dbUrl = System.getenv("CLEARDB_PURPLE_URL");
         
         URI dbUri = new URI(dbUrl);
 

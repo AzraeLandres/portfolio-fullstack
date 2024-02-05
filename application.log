@@ -2949,3 +2949,20 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2024-02-05T02:33:44.242+01:00  INFO 10636 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
 2024-02-05T02:33:44.578+01:00  INFO 10636 --- [main] c.r.portfolio.PortfolioApplicationTests  : Started PortfolioApplicationTests in 5.191 seconds (process running for 6.303)
 2024-02-05T02:33:45.212+01:00  INFO 10636 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-05T02:50:00.902+01:00  INFO 5712 --- [main] c.r.portfolio.PortfolioApplicationTests  : Starting PortfolioApplicationTests using Java 21.0.1 with PID 5712 (started by Azraël in C:\Users\Azraël\Documents\WCS\portfolio)
+2024-02-05T02:50:00.904+01:00  INFO 5712 --- [main] c.r.portfolio.PortfolioApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2024-02-05T02:50:01.645+01:00  INFO 5712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-05T02:50:01.716+01:00  INFO 5712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2024-02-05T02:50:02.176+01:00  INFO 5712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-05T02:50:02.262+01:00  INFO 5712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-05T02:50:02.312+01:00  INFO 5712 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-05T02:50:02.687+01:00  INFO 5712 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-05T02:50:03.168+01:00  WARN 5712 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-05T02:50:03.170+01:00  WARN 5712 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-05T02:50:04.147+01:00  INFO 5712 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-05T02:50:04.319+01:00  INFO 5712 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-05T02:50:04.647+01:00  INFO 5712 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-05T02:50:05.325+01:00  WARN 5712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-05T02:50:05.349+01:00  INFO 5712 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-02-05T02:50:05.712+01:00  INFO 5712 --- [main] c.r.portfolio.PortfolioApplicationTests  : Started PortfolioApplicationTests in 5.092 seconds (process running for 6.181)
+2024-02-05T02:50:06.302+01:00  INFO 5712 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
