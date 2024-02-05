@@ -37,7 +37,7 @@ public class ProjectController {
     }
     
     @CrossOrigin(origins = "*")
-    @GetMapping("/")
+    @GetMapping("/all")
     public List<ProjectDto> getProjects(){
         List<ProjectEntity> projects = projectService.getAllProjects();
         return projects.stream().map(ProjectMapper::mapToDto).collect(Collectors.toList());
