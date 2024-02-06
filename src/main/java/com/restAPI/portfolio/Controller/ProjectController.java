@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/project-azrael")
+@RequestMapping("/projects")
 public class ProjectController {
 
     @Autowired
@@ -37,7 +37,7 @@ public class ProjectController {
     }
     
     @CrossOrigin(origins = "*")
-    @GetMapping("/projects/all")
+    @GetMapping("/all")
     public List<ProjectDto> getProjects(){
         List<ProjectEntity> projects = projectService.getAllProjects();
         return projects.stream().map(ProjectMapper::mapToDto).collect(Collectors.toList());
