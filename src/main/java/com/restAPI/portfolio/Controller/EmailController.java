@@ -1,5 +1,6 @@
 package com.restAPI.portfolio.Controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,10 +20,12 @@ public class EmailController {
         this.emailService = emailService;
     }
     
-    
+    @Value("${email}")
+    private String email;
+
     @PostMapping("projects/contact")
     public ResponseEntity<String> sendEmail(@RequestBody Contact contact) {
-        emailService.sendEmail(contact.getEmailAddress(), contact.getSubject(), contact.getMessage());
+        emailService.sendEmail(email, contact.getSubject(), contact.getMessage());
         return new ResponseEntity<>("Email sent successfully", HttpStatus.OK);
     }
 }
