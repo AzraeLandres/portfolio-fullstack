@@ -19,7 +19,7 @@ public class EmailController {
         this.emailService = emailService;
     }
     
-    @CrossOrigin(origins = "https://portfolio-azrael-81e2583d3a42.herokuapp.com")
+    @CrossOrigin(origins = "*")
     @PostMapping("projects/contact")
     public ResponseEntity<String> sendEmail(@RequestBody Contact contact) {
         emailService.sendEmail(contact.getEmailAddress(), contact.getSubject(), contact.getMessage());
