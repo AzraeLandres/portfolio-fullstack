@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.47 252.01">
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.47 302.44">
   <defs>
     <style>
-      .cls-1 {
-        fill: #5c4391;
-      }
-
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
         stroke-width: 0px;
+      }
+
+      .cls-1, .cls-10 {
+        fill: #5c4391;
       }
 
       .cls-2, .cls-7 {
@@ -24,6 +24,12 @@
 
       .cls-5 {
         fill: #6cd8dd;
+      }
+
+      .cls-10 {
+        font-family: OpenSans-Bold, 'Open Sans';
+        font-size: 19px;
+        font-weight: 700;
       }
 
       .cls-6 {
@@ -44,6 +50,7 @@
     </style>
   </defs>
   <g id="OBJECTS">
+    <text class="cls-10" transform="translate(114.75 296.87)"><tspan x="0" y="0">Work in progress !</tspan></text>
     <g>
       <g>
         <g>
