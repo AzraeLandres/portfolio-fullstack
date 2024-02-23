@@ -19,11 +19,11 @@ public class EmailController {
     public EmailController(EmailService emailService) {
         this.emailService = emailService;
     }
-    
+
     @Value("${email}")
     private String email;
 
-    @PostMapping("projects/contact")
+    @PostMapping("/portfolio-azrael/contact")
     public ResponseEntity<String> sendEmail(@RequestBody Contact contact) {
         emailService.sendEmail(email, contact.getSubject(), contact.getMessage());
         return new ResponseEntity<>("Email sent successfully", HttpStatus.OK);
