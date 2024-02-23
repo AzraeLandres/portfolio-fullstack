@@ -23,7 +23,7 @@ public class EmailController {
     @Value("${email}")
     private String email;
 
-    @PostMapping("/contact")
+    @PostMapping("/portfolio-azrael/contact")
     public ResponseEntity<String> sendEmail(@RequestBody Contact contact) {
         emailService.sendEmail(email, contact.getSubject(), contact.getMessage());
         return new ResponseEntity<>("Email sent successfully", HttpStatus.OK);
