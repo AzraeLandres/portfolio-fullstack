@@ -25,7 +25,8 @@ public class EmailController {
 
     @PostMapping("/contact")
     public ResponseEntity<String> sendEmail(@RequestBody Contact contact) {
-        emailService.sendEmail(email, contact.getSubject(), contact.getMessage());
+        emailService.sendEmail(email, contact.getSubject(), contact.getMessage(), contact.getEmailAddress(),
+                contact.getFirstName(), contact.getLastName(), contact.getPhoneNumber());
         return new ResponseEntity<>("Email sent successfully", HttpStatus.OK);
     }
 }

@@ -18,10 +18,13 @@ public class EmailService {
     @Value("${Email}")
     private String Email;
 
-     public void sendEmail(String to, String subject, String body) {
+    public void sendEmail(String to, String subject, String body, String email, String firstName, String lastName,
+            String phoneNumber) {
         Email from = new Email(Email);
         Email toEmail = new Email(to);
-        Content content = new Content("text/plain", body);
+        String fullBody = "From: " + email + "\n" + "Name: " + firstName + " " + lastName + "\n" + "Phone Number: "
+                + phoneNumber + "\n" + body;
+        Content content = new Content("text/plain", fullBody);
         Mail mail = new Mail(from, subject, toEmail, content);
 
         SendGrid sg = new SendGrid(apiKey);
